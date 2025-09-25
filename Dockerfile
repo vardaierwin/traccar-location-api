@@ -1,10 +1,10 @@
-FROM traccar/traccar:6.5
+FROM python:3.11-slim
 
-# Copy configuration file
-COPY traccar.xml /opt/traccar/conf/traccar.xml
+WORKDIR /app
 
-# Expose the web port
-EXPOSE 8082
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Run Traccar
-CMD ["java", "-Xms1g", "-Xmx1g", "-Djava.net.preferIPv4Stack=true", "-jar", "/opt/traccar/tracker-server.jar", "/opt/traccar/conf/traccar.xml"]
+COPY . .
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
