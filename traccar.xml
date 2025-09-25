@@ -1,0 +1,29 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+<properties>
+    <!-- Database configuration -->
+    <entry key='database.driver'>org.postgresql.Driver</entry>
+    <entry key='database.url'>jdbc:postgresql://ep-winter-dew-agnxz9lr-pooler.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require</entry>
+    <entry key='database.user'>neondb_owner</entry>
+    <entry key='database.password'>npg_HjdvcT0z2Wmh</entry>
+
+    <!-- Web interface configuration -->
+    <entry key='web.enable'>true</entry>
+    <entry key='web.port'>8082</entry>
+    <entry key='web.path'>./web</entry>
+
+    <!-- Location services -->
+    <entry key='geocoder.enable'>true</entry>
+    <entry key='geocoder.type'>nominatim</entry>
+
+    <!-- Default map -->
+    <entry key='web.url'>https://www.openstreetmap.org</entry>
+
+    <!-- Allow cross-origin requests -->
+    <entry key='web.origin'>*</entry>
+
+    <!-- Server configuration -->
+    <entry key='logger.enable'>true</entry>
+    <entry key='logger.level'>info</entry>
+</properties>
